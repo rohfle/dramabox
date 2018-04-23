@@ -1,0 +1,33 @@
+menu "Example Configuration"
+
+config POWER_GPIO
+    int "Power GPIO number"
+	range 0 34
+	default 5
+	help
+		GPIO number (IOxx) to show power
+
+		Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+
+		GPIOs 35-39 are input-only so cannot be used as outputs.
+config WIFI_GPIO
+    int "Wifi GPIO number"
+	range 0 34
+	default 5
+	help
+		GPIO number (IOxx) to show wifi connected
+
+		Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+
+		GPIOs 35-39 are input-only so cannot be used as outputs.
+config INTERNET_GPIO
+    int "Internet GPIO number"
+	range 0 34
+	default 5
+	help
+		GPIO number (IOxx) to show internet connected
+
+		Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+
+		GPIOs 35-39 are input-only so cannot be used as outputs.
+endmenu
